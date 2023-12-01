@@ -14,15 +14,13 @@ const WouterExample = () => {
       query ($first: Int!) {
         allFilms(first: $first) {
           films {
-            created
-            director
-            title
+            id
           }
         }
       }
     `,
     variables: {
-      first: Number(tab ?? 1),
+      first: Number(tab ?? 1), // Commenting out this line somehow "fixes" the issue.
     },
   });
 

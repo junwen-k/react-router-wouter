@@ -14,9 +14,7 @@ const ReactRouterExample = () => {
       query ($first: Int!) {
         allFilms(first: $first) {
           films {
-            created
-            director
-            title
+            id
           }
         }
       }
